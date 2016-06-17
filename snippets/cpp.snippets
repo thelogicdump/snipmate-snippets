@@ -86,6 +86,7 @@ snippet cl
 
 	private:
 		${0:/* data */}
+		DISALLOW_COPY_AND_ASSIGN($1);
 	};
 # member function implementation
 snippet mfun
@@ -94,9 +95,16 @@ snippet mfun
 	}
 # namespace
 snippet ns
-	namespace ${1:`vim_snippets#Filename('', 'my')`} {
-		${0}
-	} /* namespace $1 */
+	namespace ${1:`vim_snippets#Filename('', 'my')`}
+	{
+	${0}
+	} // namespace $1
+# anonymous namespace
+snippet ans
+	namespace
+	{
+	${0}
+	} // namespace
 ##
 ## Input/Output
 # std::cout

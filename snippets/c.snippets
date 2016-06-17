@@ -42,33 +42,38 @@ snippet #if
 # header include guard
 snippet once
 	#ifndef ${1:`toupper(vim_snippets#Filename('$1_H', 'UNTITLED_H'))`}
-
 	#define $1
 
 	${0}
 
-	#endif /* end of include guard: $1 */
+	#endif /* $1 */
 ##
 ## Control Statements
 # if
 snippet if
-	if (${1:true}) {
+	if (${1:true})
+	{
 		${0}
 	}
 snippet ife
-	if (${1:true}) {
+	if (${1:true})
+	{
 		${2}
-	} else {
+	}
+	else
+	{
 		${0}
 	}
 # else
 snippet el
-	else {
+	else
+	{
 		${0}
 	}
 # else if
 snippet elif
-	else if (${1:true}) {
+	else if (${1:true})
+	{
 		${0}
 	}
 # ifi
